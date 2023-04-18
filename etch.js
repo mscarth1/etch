@@ -30,12 +30,14 @@ function makeGrid (x) {
 }
 
 
-
 function newGrid() {
-    let x = prompt("Enter a number below 100:");
-    makeGrid(x);
+    let input = parseInt(prompt("Enter a number between 0 and 100:"));
+    makeGrid(input);
 }
 
 
+window.onload = function () {
+    makeGrid(16);
+}
 
 
