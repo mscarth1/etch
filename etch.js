@@ -32,7 +32,13 @@ function makeGrid (x) {
 
 function newGrid() {
     let input = parseInt(prompt("Enter a number between 0 and 100:"));
-    makeGrid(input);
+    if (input > 0 && input <= 100) {
+        makeGrid(input);
+    }  else if (input > 100 || input < 0) {
+        alert("Not a vaild input. \nPlease try again.");
+        newGrid();
+    }
+    
 }
 
 
