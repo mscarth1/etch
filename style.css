@@ -21,11 +21,27 @@ body {
     outline: 1px solid;
 }
 
-#btnNewGrid {
+#btnContainer {
     display: flex;
-    margin: auto;
+    justify-content: center;
     margin-top: 50px;
+    
+}
+
+#btnNewGrid {
+    margin-right: 30px;
     border-radius: 5px;
     background-color: bisque;
 
+}
+
+#btnRandomColor {
+    margin-right: 30px;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+#btnBlack {
+    border-radius: 5px;
+    background-color: bisque;
 }

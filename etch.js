@@ -1,16 +1,21 @@
 
 const container = document.querySelector('#container');
-
+let btnBlack = document.querySelector("#btnBlack");
+let btnRandomColor = document.querySelector("#btnRandomColor");
 
 let grid = document.createElement('div');
 grid.className = 'grid';
-
-grid.addEventListener("mouseover", function( event ) {   
-    event.target.style.backgroundColor = "blue";
-})
     
 
+btnRandomColor.addEventListener("click", () => {
+    setRandom();
+})
+
+btnBlack.addEventListener("click", () => {
+    setBlack();
+})
    
+
 function makeGrid (x) {
     grid.replaceChildren();
     
@@ -41,9 +46,21 @@ function newGrid() {
     
 }
 
+function setRandom () {
+grid.addEventListener("mouseover", function(event) {
+
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    event.target.style.backgroundColor = "#" + randomColor;
+})
+}
+
+function setBlack() {
+grid.addEventListener("mouseover", function(event) {   
+    event.target.style.backgroundColor = "black";
+}) 
+}
 
 window.onload = function () {
     makeGrid(16);
+    setBlack();
 }
-
-
