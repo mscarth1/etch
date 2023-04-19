@@ -1,14 +1,16 @@
 
 body {
     background-color: lightblue;
+    display: flex;
+    
 }
 
 .grid {
     margin: auto;
     margin-top: 50px;
     display: grid;
-    height: 960px;
-    width: 960px;
+    height: 660px;
+    width: 660px;
     outline: 1px solid;
 }
 
@@ -23,25 +25,18 @@ body {
 
 #btnContainer {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-direction: column;
+    margin: 40px;
+    margin-top: 200px;
+    justify-content: space-between;
+    width: 150px;
+    height: 300px;
     
 }
 
-#btnNewGrid {
-    margin-right: 30px;
+.button {
     border-radius: 5px;
     background-color: bisque;
-
+    width: 100px;
 }
 
-#btnRandomColor {
-    margin-right: 30px;
-    border-radius: 5px;
-    background-color: bisque;
-}
-
-#btnBlack {
-    border-radius: 5px;
-    background-color: bisque;
-}
